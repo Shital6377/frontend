@@ -15,10 +15,13 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Install Node.js
+    - name: Set up Node.js
       uses: actions/setup-node@v2
       with:
         node-version: '16'
+
+    - name: Change directory
+      run: cd frontend  # Change 'frontend' to your project's directory if different
 
     - name: Install dependencies
       run: npm install
